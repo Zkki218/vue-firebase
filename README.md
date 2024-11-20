@@ -11,7 +11,7 @@ Shift A->D
 Login Page merupakan landing page atau halaman pertama yang muncul saat aplikasi dijalankan, Login Page akan menampilkan judul aplikasi dan tombol "Sign In with Google". Tombol ini menggunakan komponen ion-button dan icon Google yang akan mengtrigger proses login apabila diklik.
 Apabila terjadi kesalahan saat melakukan proses login maka akan ditampilkan pesan yang memberitahukan bahwa proses login gagal dan user diminta untuk mencoba kembali.
 
-<img src="docs/login.png">
+<img src="docs/login.png" height="300">
 
   - Saat dibuka, aplikasi akan menginisialisasi Firebase dengan konfigurasi yang dibuat dalam firebase.ts
   - Kemudian Google Auth akan diinisialisasi mmenggunakan client ID yang terdaftar
@@ -21,7 +21,7 @@ Apabila terjadi kesalahan saat melakukan proses login maka akan ditampilkan pesa
 
 Ketika user menekan tombol Sign In With Goole, akan muncul Pop-up untuk memilih akun Google yang ingin digunakan untuk Login, hal ini merupakan interface bawaan dari Google OAuth. Proses ini menggunakan @codetrix-studio/capacitor-google-auth untuk menangani autentikasi pada platform mobile.
 
-<img src="docs/select.png">
+<img src="docs/select.png" height="300">
 
   - Saat user menekan tombol "Sign In with Google", method loginWithGoogle() di auth store akan dipanggil,
   - Capacitor Google Auth kemudian akan menampilkan popup untuk pemilihan akun
@@ -32,13 +32,13 @@ Ketika user menekan tombol Sign In With Goole, akan muncul Pop-up untuk memilih 
 
 Setelah memilih akun, user akan diminta untuk mengkonfirmasi sekali lagi sebelum benar-benar masuk menggunakan akun yang dipilih
 
-<img src="docs/confirm.png">
+<img src="docs/confirm.png" height="300">
 
 ### 4. Home Page
 
 Setelah login berhasil, user akan diarahkan ke Home Page, halaman home ini memiliki navigasi di bagian bawah untuk beralih ke halaman profile
 
-<img src="docs/home.png">
+<img src="docs/home.png" height="300">
 
   - Setelah autentikasi berhasil, Firebase akan memberikan objek User
   - Router guard (beforeEach) kemudian akan memeriksa status autentikasi
@@ -50,7 +50,7 @@ Setelah login berhasil, user akan diarahkan ke Home Page, halaman home ini memil
 
 Halaman ini menampilkan informasi dari user yang sedang Login, foto profil diambil dari foto akun Google user menggunakan ion-avatar, nama diambil dari username akun google user dengan displayName, dan email diambil dari email Google user. Kemudian terdapat juga tombol Logout pada halaman profile ini.
 
-<img src="docs/profile.png">
+<img src="docs/profile.png" height="300">
 
   - Data untuk profil user berupa foto, nama, dan email diambil dari objek User yang sebelumnya diberikan oleh Firebase
   - Data disimpen di Pinia store dan bisa diakses di seluruh aplikasi, komponen Profile kemudian mengakses data ini melalui computed property
